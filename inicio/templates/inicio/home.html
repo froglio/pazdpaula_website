@@ -1,0 +1,205 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Paz D Paula | Centro de aprendizagem{% endblock title %}
+
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock extrahead %}
+
+
+{% block navbar %}
+    <li class="nav-item nav-page-selected"><a href="{% url 'inicio_home' %}">INÍCIO</a></li>
+    <li class="nav-item"><a href="#">SOBRE NÓS</a></li>
+    <li class="nav-item"><a href="{% url 'contato_home' %}">CONTATO</a></li>
+    <li class="nav-item"><a href="#">ALUNOS</a></li>
+{% endblock navbar %}
+
+{% block content %}
+    <div class="row background-main-screen" style="background-image:url({% static "img/background-screen1.png" %});">
+        <div class="skip-nav">
+            <div class="container">
+                <div class="main-content-wrapper">
+                    <img class="img-collage" src="{% static "img/turma-colagem.png" %}" alt="Logo">
+                    <h1>Aprenda<br>de verdade</h1>
+                    <div class="school-text-wrapper">
+                        <h2>Curso preparatório para as escolas:</h2>
+                        <div class="image-school-text-wrapper">
+                            <div class="school-group">
+                                <img src="{% static 'img/if-logo.png' %}" alt="">
+                                <p>Instituto<br>Federal</p>
+                            </div>
+
+                            <div class="school-group">
+                                <img src="{% static 'img/liberato-logo.png' %}" alt="">
+                                <p>Liberato</p>
+                            </div>
+
+                            <div class="school-group">
+                                <img src="{% static 'img/tiradentes-logo.png' %}" alt="">
+                                <p>Tiradentes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rate-text-wrapper">
+                        <div class="ballon-vector" style="background-image:url({% static 'img/ballon-vector.png' %});">
+                            <div class="ballon-wrap">
+                                <p>Índice de aprovação<br>acima de</p>
+                                <h3>90%</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-photos-wrap">
+                        <button class="btn see-more-photos">Veja mais fotos</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gradient-border"><i class="fas fa-arrow-alt-circle-down"></i></div>
+
+    <div class="row background-second-screen">
+        <div class="container">
+            <div class="title-wrap">
+                <h2>NOTÍCIAS</h2>
+                <div class="rectangle-decoration"></div>
+            </div>
+            <div class="text-news">
+                <h3>Titulo</h3>
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat dolore quo nemo, cumque sunt nulla totam ex tenetur? Laudantium repellendus asperiores a fuga eius quam, accusantium sed porro repellat esse?</p>
+                <p>Autor: Prof. Ana Paula - 19/01/2021</p>
+                <div class="text-news-arrow-group">
+                    <i class="fas fa-angle-left"></i>
+                    <i class="fas fa-angle-right"></i>
+                </div>
+            </div>
+            <div class="video-news">
+                <div class="video-screen col-sm-7">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+
+                    <div class="screen"></div>
+                </div>
+                <div class="video-carrousel col-sm-3">
+                    <i class="fas fa-sort-up"></i>
+                    <div class="video-group">
+                        <div class="thumbanail-screen"></div>
+                        <p>Titulo</p>
+                    </div>
+                    <div class="video-group">
+                        <div class="thumbanail-screen"></div>
+                        <p>Titulo 2</p>
+                    </div>
+                    <i class="fas fa-sort-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row background-third-screen" style="background-image:url({% static 'img/background-wood.jpg' %})">
+        <div class="container">
+            <div class="student-block">
+                <div class="picture-group">
+                    <i class="fas fa-chevron-left"></i>
+                    <div class="backscreen">
+                        <img src="{% static 'img/students/sergio.png' %}" alt="">
+                    </div>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="text-group">
+                    <h2>ALUNOS</h2>
+                    <h4>Sérgio Ricardo Machado F.F</h4>
+                    <div class="paper-background-group" style="background-image:url({% static 'img/paper-background.jpg' %});">
+                        <div class="container">
+                            <p>Depois de muito esforço
+                                e dedicação, parabenizamos
+                                nossos alunos com muito
+                                amor e carinho pela aprovação!
+                            </p>
+                        </div>
+                    </div>
+                    <div style="clear:both;"></div>
+                </div>
+            </div>
+
+            <div class="student-block grade">
+                <div class="picture-group grade">
+                    <i class="fas fa-chevron-left"></i>
+                    <div class="backscreen grade">
+                        <img src="{% static 'img/class/class_2019_photo1.jpg' %}" alt="">
+                    </div>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="text-group grade">
+                    <h2>TURMAS</h2>
+                    <h4>Turma de 
+                        <select name="" id="">
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020" selected>2020</option>
+                        </select>
+                    </h4>
+                    <div class="paper-background-group grade" style="background-image:url({% static 'img/paper-background.jpg' %});">
+                        <div class="container">
+                            <p>Não há sensação melhor do que ver o sorriso em seus rostos e a felicidade de ter realizado essa conquista!</p>
+                        </div>
+                    </div>
+                    <div style="clear:both;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row background-forth-screen">
+        <div class="container">
+            <div class="text-row">
+                <h1>NOSSO ESPAÇO</h1>
+            </div>
+            <div class="image-wrapper">
+                <div class="image-row">
+                    <img src="{% static 'img/space/sala-um.jpg' %}" alt="">
+                    <img src="{% static 'img/space/sala-um-d.jpg' %}" alt="">
+                    <img src="{% static 'img/space/sala-dois.jpg' %}" alt="">
+                </div>
+                <div class="image-row">
+                    <img src="{% static 'img/space/sala-tres.jpg' %}" alt="">
+                    <img src="{% static 'img/space/sala-tres-d.jpg' %}" alt="">
+                    <img src="{% static 'img/space/sala-quatro.jpg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row space-between-pages"></div>
+
+    <div class="row background-fifth-screen">
+        <div class="background-image" style="background-image: url({% static 'img/fundo-decoracao-pronto.png' %});">
+            <div class="container">
+                <div class="text-group">
+                    <h1>Nosso projeto EAD</h1>
+                    <h3>Como irá funcionar:</h3>
+                    <p>O site Paz D Paula terá um sistema próprio para o EAD,
+                    onde contará com cursos preparatórios desenvolvidos para
+                    as escolas técnicas e Tiradentes.</p>
+                    <p>Cada curso possuirá seus módulos individuais, onde todas
+                    matérias e conteúdos passados em aula presencial serão também
+                    contidos na plataforma EAD.</p>
+                    
+                    <div class="button-group">
+                        <p>Se interessou? Fique por dentro do projeto e não
+                        perca nada!</p>
+                        <div class="btn-align">
+                            <button class="btn btn-success">Acompanhe o projeto</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <img src="{% static 'img/online-learning.svg' %}" alt="">
+    </div>
+{% endblock content %}
+

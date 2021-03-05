@@ -1,0 +1,148 @@
+/* =-=-=-= CONFIGS PRINCIPAIS =-=-=-= */
+:root {
+    --dark-gray: #2e2d2d;
+    --dark-gray-hover: #181717;
+    --main-blue: #083D77;
+    --main-orange: #F18F01;
+    --second-orange: #F9AF0B;
+    --main-yellow: #FFF05A;
+    --second-yellow: rgb(252, 207, 50);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Montserrat', 'sans-serif';
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+p, h1, h2, h3, h4, a, li {
+    color: white;
+}
+
+.skip-nav {
+    margin-top: 8rem;
+    width: 100%;
+}
+
+
+/* =-=-=-= Informação extra =-=-=-=-= */
+.extra-information {
+    width: 100%;
+    background-color: #89C5FD;
+    text-align: center;
+    border-bottom: 3px solid #369BF9;
+}
+.extra-information > p {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 15px;
+}
+.extra-information > button {
+    display: inline-block;
+    height: 38px;
+    margin-left: 20px;
+    text-align: center;
+    background-color: var(--dark-gray);
+    border: 0;
+    border-radius: 9px;
+    padding: 1px 10px;
+    box-sizing: content-box;
+    cursor: pointer;
+    outline: 0;
+    transition: 300ms;
+}
+.extra-information > button:hover {
+    background-color: var(--dark-gray-hover);
+}
+.extra-information > button > p {
+    margin: 0;
+    font-weight: 600;
+    font-size: 15px;
+}
+.extra-information > i {
+    cursor: pointer;
+    position: absolute;
+    right: 4rem;
+    top: 1.2rem;
+}
+/* =-=-=-= FECHADO Informação extra =-=-=-=-= */
+
+/* =-=-=-= Header =-=-=-=-= */
+header.main-header {
+    width: 100%;
+}
+header.main-header ul {
+    display: flex;
+    margin-bottom: 0;
+}
+header.main-header ul a {
+    color: white;
+    font-weight: 300;
+    font-size: 0.94rem;
+    transition: 200ms;
+    cursor: pointer;
+    text-decoration: none;
+}
+header.main-header ul a:hover {
+    color: #fdcc82;
+}
+header.main-header > div.container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+header.main-header ul a:nth-child(-n + 3) {
+    margin-right: 5vw;
+}
+header.main-header .nav-page-selected > a {
+    color: var(--main-orange);
+}
+header.main-header img {
+    width: 160px;
+}
+header.main-header .nav-wrapper {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+}
+/* =-=-=-=-= FECHADO Header =-=-=-=-=-= */
+
+
+/* FOOTER */
+footer {
+    margin-top: 70px;
+}
+
+footer .payment-methods {
+    margin: 0;
+    height: 100px;
+    background-color: var(--main-orange);
+}
+footer .information {
+    text-align: center;
+    margin: 0;
+    height: 50px;
+    background-color: var(--main-blue);
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+footer .information p {
+    margin: 0;
+    color: white;
+    font-size: 0.8rem;
+}
+/* fechado FOOTER */
+

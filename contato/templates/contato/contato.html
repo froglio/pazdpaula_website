@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Paz D Paula | Contato{% endblock title %}
+
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/contato.css' %}">
+{% endblock extrahead %}
+
+
+{% block navbar %}
+    <li class="nav-item"><a href="{% url 'inicio_home' %}">INÍCIO</a></li>
+    <li class="nav-item"><a href="#">SOBRE NÓS</a></li>
+    <li class="nav-item nav-page-selected"><a href="{% url 'contato_home' %}">CONTATO</a></li>
+    <li class="nav-item"><a href="#">ALUNOS</a></li>
+{% endblock navbar %}
+
+{% block content %}
+    <div class="row main-screen">
+        <div class="skip-nav" style="background-image: url({% static 'img/contact-wallpaper.png' %});">
+            <div class="information-part">
+                <div class="text-group">
+                    <div class="visit-wrap">
+                        <h4>Faça uma visita</h4>
+                        <p>Nos encontramos em: Rua João Leivas de Carvalho 462, 92420-250, Canoas RS</p>
+                    </div>
+                    <div class="contact-wrap">
+                        <h3>Contato</h3>
+                        <p>Entre em contato com a gente!</p>
+                        <p>(51) 9734-0053</p>
+                        <p>(51) 9759-7527</p>
+                        
+
+                    </div>
+                    <div class="paragraph-wrap">
+                        <p>Se torne um aluno do nosso cursinho e se prepare para passar nas melhores escolas técnicas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="maps-part">
+                <img src="{% static 'img/maps.jpg' %}" alt="">
+            </div>
+        </div>
+    </div>
+{% endblock content %}

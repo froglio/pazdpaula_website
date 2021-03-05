@@ -1,0 +1,89 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+
+    <meta name="author" content="Fabricio Roglio de Sousa">
+    <meta name="keywords" content="pazdpaula, curso preparatorio, cursinho, Paz De Paula, if, liberato, tiradentes, instituto federal, ifrs, ifsul, website, webpage">
+    <meta name="description" content="Paz D Paula - Curso Preparatório">
+
+    <!-- Fontes personalizadas -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'img/pazdpaula-icon.png' %}">
+
+    <!-- Bootstrap CSS -->
+    <link href={% static 'frameworks/bootstrap/css/bootstrap.min.css' %} rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    
+    {% block extrahead %}
+    {% endblock extrahead %}
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="extra-information">
+            <p>A plataforma EAD já está chegando, aproveite para ver como irá funcionar!</p>
+
+            <button>
+                <p>Saber mais</p>
+            </button>
+
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="container">
+            <nav class="navbar navbar-light justify-content-between">
+                <div class="nav-wrapper">
+                    <a href="{% url 'inicio_home' %}"><img src="{% static "img/pazdpaula-logo.png" %}" alt="Logo"></a>
+                    <ul class="navbar-ul">
+                        {% block navbar %}
+                        {% endblock navbar %}
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    {% block content %}
+    {% endblock content %}
+
+    <!-- Footer -->
+    <footer>
+        <div class="row payment-methods">
+        
+        </div>
+        <div class="row information">
+            <div class="container">
+                <p>&copy; 2021 - Paz D Paula | Centro de aprendizagem - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src={% static 'frameworks/jquery/jquery.min.js' %}></script>
+    <script src={% static 'frameworks/bootstrap/js/bootstrap.bundle.min.js' %}></script>
+    <script src="https://kit.fontawesome.com/ee8f0c32c6.js" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+            
+
+            $("div.extra-information > i").click(function() {
+                $("div.extra-information").fadeOut(200)
+            });
+        });
+    </script>
+
+    {% block extrafooter %}
+    {% endblock extrafooter %}
+</body>
+</html>

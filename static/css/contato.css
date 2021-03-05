@@ -1,0 +1,60 @@
+:root {
+    --dark-gray: #2e2d2d;
+    --dark-gray-hover: #181717;
+    --main-blue: #083D77;
+    --main-orange: #F18F01;
+    --second-orange: #F9AF0B;
+    --main-yellow: #FFF05A;
+    --second-yellow: rgb(252, 207, 50);
+}
+
+/* MAIN SCREEN */
+.main-screen {
+    background-color: var(--main-blue);
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    min-height: 717px;
+}
+
+.main-screen .skip-nav {
+    background-color: (--second-orange);
+    background-blend-mode: luminosity;
+}
+
+.main-screen .line-separate-nav {
+    height: 20px;
+    background-color: var(--main-blue);
+    margin: 0;
+}
+
+.main-screen .information-part {
+    display: inline-block;
+    width: 50%;
+}
+.main-screen .information-part .text-group {
+    padding: 7% 10% 0% 19%;
+}
+
+.information-part .text-group .visit-wrap {
+    border: 4px dashed white;
+    padding: 11px;
+}
+
+.main-screen .maps-part {
+    display: inline-block;
+    width: 50%;
+    float: right;
+}
+.main-screen .maps-part > img {
+    width: 100%;
+}
+
+/* fechado MAIN SCREEN */
+
+/* FOOTER */
+footer {
+    margin: 0;
+}

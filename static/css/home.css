@@ -1,0 +1,484 @@
+/* MAIN SCREEN */
+.background-main-screen {
+    background-color: var(--main-blue);
+    background-blend-mode: luminosity;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    min-height: 717px;
+    margin: 0;
+}
+.background-main-screen .main-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+		"foto titulo"
+		"foto substitulo"
+        "foto taxa"
+        "botao taxa"
+		;
+}
+.background-main-screen .school-text-wrapper {
+    margin-top: 50px;
+    grid-area: substitulo;
+}
+.background-main-screen .school-text-wrapper > h2 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.background-main-screen img.img-collage {
+    width: 80%;
+    grid-area: foto;
+    justify-self: center;
+}
+.background-main-screen h1 {
+    grid-area: titulo;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--main-orange);
+    text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.5);
+}
+.background-main-screen .school-group {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    margin-right: 10px;
+}
+.background-main-screen .school-group img {
+    width: 70%;
+    margin-bottom: 13px;
+}
+.background-main-screen .school-group:first-child img {
+    width: 60%;
+}
+.background-main-screen .school-group:last-child img {
+    margin-bottom: 10px;
+}
+.background-main-screen .school-group p {
+    font-weight: 400;
+}
+
+.background-main-screen .rate-text-wrapper {
+    justify-content: end;
+    display: grid;
+    grid-template-rows: 100%;
+    margin-right: 10%;
+    grid-area: taxa;
+}
+.background-main-screen .rate-text-wrapper p {
+    text-align: end;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+.background-main-screen .rate-text-wrapper h3 {
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: var(--main-orange);
+}
+.background-main-screen .ballon-wrap {
+    top: -8px;
+    right: 6px;
+    position: relative;
+}
+.background-main-screen .ballon-vector {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 40px;
+}
+
+.background-main-screen .btn-photos-wrap {
+    text-align: right;
+    margin-right: 19%;
+}
+.background-main-screen .see-more-photos {
+    grid-area: botao;
+    bottom: 80px;
+    position: relative;
+    width: 30%;
+    min-width: 160px;
+    max-width: 300px;
+    border: 3px solid var(--main-orange);
+    border-radius: 20px;
+    color: var(--main-orange);
+    background: none;
+    font-weight: 600;
+    transition: 300ms;
+}
+.background-main-screen .see-more-photos:hover {
+    background-color: var(--main-orange);
+    color: var(--main-blue);
+    -webkit-box-shadow: 0px 0px 30px 2px var(--main-orange);
+    -moz-box-shadow: 0px 0px 30px 2px var(--main-orange);
+    box-shadow: 0px 0px 30px 2px var(--main-orange);
+}
+/* fechado MAIN SCREEN */
+
+
+
+/* GRADIENT BORDER */
+.gradient-border {
+    background-image: linear-gradient(to right, var(--main-blue), rgb(72, 6, 163));
+    width: 100%;
+    height: 20px;
+    text-align: center;
+}
+.gradient-border i {
+    transform: scale(2.0);
+    color: var(--info);
+}
+/* fechado GRADIENT BORDER */
+
+
+
+/* SECOND SCREEN */
+.background-second-screen {
+    background-color: var(--second-orange);
+    width: 100%;
+    /* height: 105vh;
+    min-height: 400px; */
+    margin: 0;
+}
+.background-second-screen .title-wrap {
+    justify-content: center;
+    margin-top: 20px;
+    display: flex;
+}
+.background-second-screen .title-wrap h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    position: relative;
+    left: 90px;
+    top: 5px;
+    z-index: 1;
+}
+.background-second-screen .rectangle-decoration {
+    background-color: var(--second-yellow);
+    width: 11rem;
+    position: relative;
+    right: 37px;
+}
+
+.background-second-screen .text-news {
+    background-color: var(--second-yellow);
+    padding: 20px;
+    box-shadow: 4px 4px 5px #083D7734;
+    border-radius: 25px 0 25px 0;
+}
+.background-second-screen .text-news h3 {
+    color: var(--main-blue);
+    font-weight: 600;
+}
+.background-second-screen .text-news hr {
+    background-color: var(--main-blue);
+    opacity: 30%;
+}
+.background-second-screen .text-news p:nth-child(2) {
+    font-weight: 200;
+}
+.background-second-screen .text-news-arrow-group {
+    display: flex;
+    margin: 0 auto;
+    width: 88%;
+    justify-content: space-between;
+}
+.background-second-screen .text-news-arrow-group i {
+    font-size: 40px;
+    color: var(--main-blue);
+    cursor: pointer;
+}
+
+.background-second-screen .video-news {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 50px; */
+}
+.background-second-screen .video-screen {
+    height: 370px;
+    background-color: #2D2F3D;
+    border-radius: 15px 15px 0 0;
+    position: relative;
+    top: 30px;
+    padding: 0;
+}
+.background-second-screen .video-screen .circle {
+    display: inline-block;
+    background-color: #69696A;
+    border-radius: 50%;
+    width: 12px;
+    padding-bottom: 12px;
+    position: relative;
+    left: 21px;
+    top: 4px;
+    margin-right: 5px;
+}
+.background-second-screen .video-screen .screen {
+    background-color: rgb(253, 163, 163);
+    width: 100%;
+    bottom: 0;
+    height: 340px;
+    position: absolute;
+}
+
+.background-second-screen .video-carrousel {
+    margin-top: 30px;
+    text-align: center;
+}
+.background-second-screen .video-carrousel i {
+    color: var(--main-blue);
+    font-size: 30px;
+    cursor: pointer;
+}
+.background-second-screen .video-carrousel .thumbanail-screen {
+    background-color: pink;
+    width: 60%;
+    padding-bottom: 40%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.background-second-screen .video-carrousel .video-group p {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    padding: 0 15px;
+}
+.background-second-screen .video-carrousel > div.video-group:nth-child(3) > p {
+    margin-bottom: 0;
+}
+.background-second-screen .video-carrousel i:last-of-type {
+    margin-bottom: 30px;
+}
+/* fechado SECOND SCREEN */
+
+
+/* THIRD SCREEN */
+.background-third-screen {
+    height: 168vh;
+    margin: 0;
+    background-repeat: no-repeat;
+}
+
+.background-third-screen .student-block {
+    width: 80%;
+    margin: 80px auto 0 auto;
+    display: flex;;
+}
+.background-third-screen .picture-group {
+    z-index: 1;
+    position: relative;
+}
+.background-third-screen .picture-group i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    margin: 0 2%;
+    cursor: pointer;
+    transition: 200ms;
+}
+.background-third-screen .picture-group i:hover {
+    color: rgb(202, 202, 202);
+}
+.background-third-screen .picture-group i.fa-chevron-right {
+    right: 0;
+}
+.background-third-screen .backscreen {
+    background-color: #CCC;
+    border: 2vw solid #141414;
+    padding: 0.5vw;
+}
+.background-third-screen .backscreen img {
+    width: 20vw;
+}
+
+.background-third-screen .text-group {
+    margin-left: 10%;
+}
+.background-third-screen .text-group h2 {
+    font-size: 3rem;
+    color: #F9AF0B;
+    text-shadow: 0px 4px #9A6D0A;
+    font-weight: 700;
+}
+.background-third-screen .text-group h4 {
+    font-weight: 600;
+}
+.background-third-screen .paper-background-group {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 40vh;
+    margin-top: 35px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    box-shadow: 1px 1px 10px 4px #00000070;
+}
+.background-third-screen .paper-background-group p {
+    width: 40%;
+    float: right;
+    font-size: 1.6rem;
+    margin-right: 11%;
+    text-shadow: 1px 1px #02074d30;
+    color: var(--main-blue);
+}
+
+.background-third-screen .student-block.grade {
+    flex-direction: row-reverse;
+    margin-top: 150px;
+}
+.background-third-screen .backscreen.grade img {
+    width: 25vw;
+}
+.background-third-screen .text-group.grade {
+    margin-right: 20%;
+    margin-left: 0
+}
+.background-third-screen .paper-background-group.grade {
+    height: 35vh;
+}
+.background-third-screen .paper-background-group.grade p {
+    float: left;
+    margin-left: 10%;
+}
+.background-third-screen .text-group select {
+    border: 0;
+    border-radius: 4px;
+    background-color: var(--main-orange);
+    color: var(--main-blue);
+    outline: none;
+    font-weight: 600;
+    
+    transition: 600ms;
+}
+.background-third-screen .text-group select:hover {
+    background-color: var(--main-blue);
+    color: var(--main-orange);
+    cursor: pointer;
+    box-shadow: 5px 5px;
+}
+/* fechado THIRD SCREEN */
+
+/* FORTH SCREEN */
+.background-forth-screen {
+    margin: 0;
+    width: 100%;
+    background-image: url(../img/background-wood.jpg);
+}
+.background-forth-screen .text-row {
+    text-align: center;
+    margin-top: 20px;
+}
+.background-forth-screen h1 {
+    z-index: 1;
+    position: relative;
+    color: var(--main-orange);
+    font-weight: bold;
+    text-shadow: 2px 2px var(--danger);
+}
+.background-forth-screen .image-wrapper {
+    position: relative;
+    bottom: 30px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.background-forth-screen .image-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.background-forth-screen .image-row img{
+    width: calc(100%/3);
+    border: 5px solid var(--main-blue);
+    border-style: outset;
+    transition: transform 300ms;
+}
+.background-forth-screen .image-row img:hover {
+    z-index: 1;
+    transform: scale(1.3);
+}
+/* fechado FORTH SCREEN */
+
+/* SPACE BETWEEN */
+div.space-between-pages {
+    height: 30px;
+    background-color: var(--main-blue);
+    box-shadow: 4px 0 9px black;
+    position: relative;
+    margin: 0;
+}
+/* fechado SPACE BETWEEN */
+
+/* FIFTH SCREEN */
+.background-fifth-screen {
+    margin: 0;
+    position: relative;
+}
+
+.background-fifth-screen .background-image {
+    width: 75%;
+    padding-bottom: 14%;
+    background-repeat: no-repeat;
+}
+
+.background-fifth-screen .background-image .text-group {
+    margin: 0 auto;
+    padding: 2% 30% 2% 10%;
+}
+
+.background-fifth-screen .background-image h1 {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.5rem;
+}
+
+.background-fifth-screen .background-image h3 {
+    margin-top: 3%;
+}
+
+.background-fifth-screen .background-image p {
+    margin-top: 2%;
+    font-size: 1.1rem;
+}
+
+.background-fifth-screen .background-image .button-group {
+    padding-right: 44%;
+    margin-top: 7%;
+}
+
+.background-fifth-screen .background-image .btn-align {
+    width: 100%;
+    text-align: center;
+}
+
+.background-fifth-screen .background-image button {
+    background-image: linear-gradient(90deg, rgba(96,250,250,1) 0%, rgba(8,61,119,1) 50%);
+    background-size: 200%;
+    background-position: left;
+    outline: none;
+    padding: 13px;
+    box-shadow: 3px 3px 7px rgb(0 0 0 / 40%);
+    border: 0;
+    border-radius: 50px;
+    transition: 500ms;
+    margin: 0 auto;
+}
+
+.background-fifth-screen .background-image button:hover {
+    background-position: right;
+}
+
+.background-fifth-screen > img {
+    position: absolute;
+    width: 43%;
+    right: 0;
+    bottom: 0;
+}
+
+/* fechado FIFTH SCREEM */
