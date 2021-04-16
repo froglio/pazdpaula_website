@@ -5,7 +5,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: auto;
     min-height: 717px;
     margin: 0;
 }
@@ -218,11 +218,15 @@
     margin-right: 5px;
 }
 .background-second-screen .video-screen .screen {
-    background-color: rgb(253, 163, 163);
     width: 100%;
     bottom: 0;
     height: 340px;
     position: absolute;
+}
+
+.video-screen .screen iframe {
+    width: 100%;
+    height: 100%;
 }
 
 .background-second-screen .video-carrousel {
@@ -235,12 +239,14 @@
     cursor: pointer;
 }
 .background-second-screen .video-carrousel .thumbanail-screen {
-    background-color: pink;
-    width: 60%;
-    padding-bottom: 40%;
     margin: 0 auto;
     cursor: pointer;
 }
+.video-carrousel .thumbanail-screen iframe {
+    width: 100%;
+    height: 100%;
+}
+
 .background-second-screen .video-carrousel .video-group p {
     margin-top: 8px;
     font-size: 0.8rem;
@@ -257,9 +263,9 @@
 
 /* THIRD SCREEN */
 .background-third-screen {
-    height: 168vh;
     margin: 0;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
+    padding-bottom: 128px;
 }
 
 .background-third-screen .student-block {
@@ -276,15 +282,17 @@
     top: 50%;
     transform: translateY(-50%);
     color: white;
-    margin: 0 2%;
     cursor: pointer;
     transition: 200ms;
 }
+.background-third-screen .picture-group i.fa-chevron-right {
+    right: 2%;
+}
+.background-third-screen .picture-group i.fa-chevron-left {
+    left: 2%;
+}
 .background-third-screen .picture-group i:hover {
     color: rgb(202, 202, 202);
-}
-.background-third-screen .picture-group i.fa-chevron-right {
-    right: 0;
 }
 .background-third-screen .backscreen {
     background-color: #CCC;
@@ -386,19 +394,15 @@
     bottom: 30px;
     display: grid;
     grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
-.background-forth-screen .image-row {
+.background-forth-screen .image-wrapper img{
     width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-.background-forth-screen .image-row img{
-    width: calc(100%/3);
     border: 5px solid var(--main-blue);
     border-style: outset;
     transition: transform 300ms;
 }
-.background-forth-screen .image-row img:hover {
+.background-forth-screen .image-wrapper img:hover {
     z-index: 1;
     transform: scale(1.3);
 }
@@ -482,3 +486,384 @@ div.space-between-pages {
 }
 
 /* fechado FIFTH SCREEM */
+
+
+/* MEDIA QUERIES */
+@media (max-width:)
+
+@media (max-width: 1325px) {
+    .background-fifth-screen .background-image .text-group {
+        padding: 2% 30% 11% 0%;
+    }
+
+    .background-fifth-screen .background-image {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1100px) {
+    .background-fifth-screen .background-image .text-group {
+        padding: 2% 40% 11% 0%;
+    }
+}
+
+@media (max-width: 1033px) {
+    .background-fifth-screen .background-image .text-group {
+        padding: 2% 27% 11% 0%;
+    }
+}
+
+@media (max-width: 991px) {
+    .background-fifth-screen .background-image {
+        width: 100%;
+        padding-bottom: 18%;
+    }
+
+    .background-fifth-screen .background-image .text-group {
+        margin: 0 auto;
+        padding: 2% 14% 12% 0%;
+    }
+
+    .background-third-screen .paper-background-group p {
+        font-size: 1.2rem;
+        padding: 20px 0;
+    }
+
+    .background-third-screen .paper-background-group {
+        height: auto;
+    }
+}
+
+@media (max-width: 900px) {
+    .background-main-screen h1 {
+        font-size: 3rem;
+    }
+
+    .background-third-screen .paper-background-group p {
+        font-size: 1.2rem;
+        padding: 20px 0;
+    }
+
+    .background-third-screen .paper-background-group {
+        height: auto;
+    }
+
+    .background-third-screen .paper-background-group.grade {
+        height: auto;
+    }
+
+    .background-third-screen .student-block.grade {
+        margin-top: 30%;
+    }
+
+    .background-fifth-screen .background-image {
+        width: 100%;
+        background-size: cover;
+    }
+
+    .background-fifth-screen .background-image h1 {
+        font-size: 2.9rem;
+    }
+
+    .background-fifth-screen .background-image p {
+        font-size: 1.0rem;
+    }
+
+    .background-fifth-screen .background-image .text-group {
+        padding: 2% 30% 15% 10%;
+    }
+}
+
+@media (max-width: 767px) {
+    .background-main-screen .school-group p {
+        font-weight: 400;
+        font-size: 0.9rem;
+    }
+
+    .background-main-screen .school-group {
+        margin-right: 0;
+    }
+
+    .background-main-screen .school-group img {
+        width: 50%;
+    }
+
+    .background-main-screen .school-group:first-child img {
+        width: 45%;
+    }
+
+    .background-main-screen .rate-text-wrapper p {
+        font-size: 0.9rem;
+    }
+
+    .background-main-screen .rate-text-wrapper h3 {
+        font-size: 2.2rem;
+    }
+
+    .background-main-screen .ballon-vector {
+        padding: 32px;
+    }
+
+    .background-main-screen img.img-collage {
+        width: 90%;
+        margin-top: 15%;
+    }
+
+    .background-third-screen .student-block.grade {
+        margin-top: 53%;
+    }
+
+    .background-third-screen .paper-background-group p {
+        font-size: 1.1rem;
+        padding: 18px 0;
+    }
+
+    .background-third-screen .picture-group i.fa-chevron-right {
+        right: 0%;
+    }
+
+    .background-third-screen .picture-group i.fa-chevron-left {
+        left: 1%;
+    }
+
+    .background-fifth-screen .background-image .text-group {
+        padding: 2% 10% 15% 0%;
+    }
+}
+
+@media (max-width: 600px) {
+    .background-main-screen {
+        height: auto;
+        min-height: 0;
+    }
+    .background-main-screen .main-content-wrapper {
+        display: inline-block;
+        width: 100%;
+    }
+    .main-content-wrapper > img {
+        display: none;
+    }
+    .main-content-wrapper > h1 {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bold;
+        color: var(--main-orange);
+        text-shadow: 6px 6px 5px rgb(0 0 0 / 30%);
+    }
+    .background-main-screen .school-text-wrapper > h2 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+    .btn-photos-wrap > button {
+        display: none;
+    }
+
+
+
+    .background-second-screen .title-wrap h2 {
+        left: 11.5%;
+    }
+    .background-second-screen .video-news {
+        display: block;
+    }
+    .background-second-screen .video-carrousel {
+        margin-top: 50px;
+    }
+
+
+
+    .background-third-screen .student-block {
+        flex-direction: column-reverse;
+        text-align: center;
+        margin: 40px auto 0 auto;
+        width: 100%;
+    }
+    .background-third-screen .picture-group {
+        margin: 0 auto;
+    }
+
+    .background-third-screen .backscreen {
+        background-color: #CCC;
+        border: 5vw solid #141414;
+        padding: 0.9vw;
+        width: 60vw;
+    }
+    .background-third-screen .backscreen img {
+        width: 48vw;
+    }
+
+    .background-third-screen .text-group {
+        margin-left: 0;
+    }
+    .background-third-screen .text-group > h2 {
+        font-size: 2.5rem;
+    }
+    .background-third-screen .text-group > h4 {
+        font-size: 1.2rem;
+    }
+    .background-third-screen .paper-background-group {
+        margin-top: 70%;
+    }
+
+    .background-third-screen .student-block.grade {
+        margin-top: 428px;
+    }
+
+    .background-third-screen .paper-background-group {
+        margin: 0;
+        height: auto;
+        width: 100%;
+        margin-top: 67%;
+    }
+
+    .background-third-screen .paper-background-group p {
+        width: 100%;
+        font-size: 1.2rem;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .background-third-screen .student-block.grade {
+        flex-direction: column-reverse;
+        margin-top: 50%;
+    }
+    .background-third-screen .text-group.grade {
+        margin-right: 0;
+    }
+    .background-third-screen .backscreen.grade img {
+        width: 48vw;
+    }
+
+    .background-third-screen .paper-background-group.grade {
+        height: auto;
+        min-height: 154px;
+    }
+    .background-third-screen .paper-background-group.grade p {
+        margin-left: 0;
+    }
+    .background-forth-screen {
+        margin-top: 25%;
+    }
+
+    .background-forth-screen .image-wrapper {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    
+    .background-fifth-screen .background-image {
+        width: 100%;
+        background-size: cover;
+        padding-bottom: 48%;
+    }
+    .background-fifth-screen .background-image .text-group {
+        padding: 13px;
+    }
+    .background-fifth-screen .background-image h1 {
+        font-size: 2rem;
+    }
+    .background-fifth-screen .background-image h3 {
+        font-size: 1.2rem;
+    }
+    .background-fifth-screen .background-image p {
+        font-size: 0.9rem;
+    }
+
+    .background-fifth-screen .background-image .button-group {
+        padding-right: 0;
+    }
+
+    .background-fifth-screen > img {
+        width: 50%;
+    }
+
+
+
+    footer {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 576px) {
+    .col-sm-7 {
+        max-width: 100%;
+    }
+
+    .col-sm-3 {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 404px) {
+    .background-third-screen .student-block.grade {
+        margin-top: 70%;
+    }
+}
+
+@media (max-width: 340px) {
+    .background-main-screen .rate-text-wrapper h3 {
+        font-size: 2.7rem;
+    }
+
+    .background-main-screen .rate-text-wrapper p {
+        font-size: 0.9rem;
+    }
+
+    .background-second-screen .title-wrap h2 {
+        left: 18.5%;
+        font-size: 2.2rem;
+    }
+
+    .background-third-screen .student-block.grade {
+        margin-top: 90%;
+    }
+
+    .background-fifth-screen .background-image p {
+        font-size: 0.7rem;
+    }
+
+    .background-fifth-screen .background-image button {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .background-main-screen .rate-text-wrapper h3 {
+        font-size: 2.7rem;
+    }
+
+    .background-main-screen .rate-text-wrapper p {
+        font-size: 0.9rem;
+    }
+
+    .background-main-screen .school-group img {
+        width: 45% !important;
+    }
+
+    .background-main-screen .school-group {
+        margin-right: 0;
+    }
+
+    .background-second-screen .rectangle-decoration {
+        min-width: 6rem;
+    }
+
+    .background-forth-screen {
+        margin-top: 36%;
+    }
+
+    .background-third-screen .student-block.grade {
+        margin-top: 115%;
+    }
+
+    .background-fifth-screen .background-image {
+        padding-bottom: 100%;
+    }
+
+    .background-fifth-screen > img {
+        width: 92%;
+    }
+}
+

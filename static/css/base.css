@@ -33,6 +33,10 @@ p, h1, h2, h3, h4, a, li {
     width: 100%;
 }
 
+body.is-active {
+    overflow-y: hidden;
+}
+
 
 /* =-=-=-= Informação extra =-=-=-=-= */
 .extra-information {
@@ -40,6 +44,7 @@ p, h1, h2, h3, h4, a, li {
     background-color: #89C5FD;
     text-align: center;
     border-bottom: 3px solid #369BF9;
+    padding: 15px 20px;
 }
 .extra-information > p {
     display: inline-block;
@@ -73,7 +78,7 @@ p, h1, h2, h3, h4, a, li {
     cursor: pointer;
     position: absolute;
     right: 4rem;
-    top: 1.2rem;
+    top: 2.2rem;
 }
 /* =-=-=-= FECHADO Informação extra =-=-=-=-= */
 
@@ -81,6 +86,14 @@ p, h1, h2, h3, h4, a, li {
 header.main-header {
     width: 100%;
 }
+
+/* header .nav-mobile {
+    display: none;
+} */
+header {
+    display: block;
+}
+
 header.main-header ul {
     display: flex;
     margin-bottom: 0;
@@ -101,7 +114,7 @@ header.main-header > div.container {
     left: 50%;
     transform: translateX(-50%);
 }
-header.main-header ul a:nth-child(-n + 3) {
+header.main-header ul li:not(:last-child) > a {
     margin-right: 5vw;
 }
 header.main-header .nav-page-selected > a {
@@ -117,6 +130,107 @@ header.main-header .nav-wrapper {
     margin-top: 15px;
     align-items: center;
 }
+
+/* =-=-=-=-= HEADER MOBILE =-=-=-=-= */
+.hamburger {
+    position: relative;
+    display: none;
+    width: 35px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none !important;
+    border: none;
+}
+
+.hamburger .bar, .hamburger::after, .hamburger::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.hamburger.is-active::before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger.is-active::after {
+    transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburger.is-active .bar {
+    opacity: 0;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: block;
+    z-index: 98;
+    background-color: var(--main-blue);
+    padding: 25px;
+    transition: left 400ms ease-in-out;
+}
+
+.mobile-nav.is-active {
+    left: 0;
+}
+
+.mobile-nav .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mobile-nav .nav-wrapper img {
+    width: 160px;
+}
+
+.mobile-nav .navbar-ul {
+    margin-top: 15vh;
+    text-align: center;
+    line-height: 4;
+}
+
+.mobile-nav .navbar-ul li.nav-page-selected a {
+    color: var(--main-orange);
+}
+
+.mobile-nav .nav-contact {
+    margin-top: 7vh;
+}
+
+.mobile-nav .nav-contact .icon-contact {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.mobile-nav .nav-contact .icon-contact i {
+    font-size: 2.5rem;
+    color: var(--main-orange);
+}
+
+.mobile-nav .nav-contact .text-contact {
+    text-align: center;
+    margin-top: 4vh;
+}
+
+.mobile-nav .nav-contact .text-contact p {
+    margin: 0;
+}
+
+.mobile-nav .nav-contact .text-contact p > i {
+    margin-right: 5px;
+}
+
+/* =-=-=-=-= FECHADO HEADER MOBILE =-=-=-=-= */
+
 /* =-=-=-=-= FECHADO Header =-=-=-=-=-= */
 
 
@@ -146,3 +260,65 @@ footer .information p {
 }
 /* fechado FOOTER */
 
+
+
+
+/* MEDIA QUERIES */
+@media (max-width: 899px) {
+    .extra-information > i {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    /* =-=-=-= Informação extra =-=-=-=-= */
+    .extra-information {
+        padding: 20px;
+    }
+    .extra-information > p {
+        margin: 0;
+        font-size: 0.9em;
+    }
+    .extra-information > button {
+        display: inline-block;
+        height: 38px;
+        margin-left: 0;
+        margin-top: 10px;
+        padding: 1px 35px;
+    }
+    .extra-information > i {
+        display: none;
+    }
+    /* =-=-=-= FECHADO Informação extra =-=-=-=-= */
+
+    /* =-=-=-= Header =-=-=-=-= */
+    header .nav-wrapper > ul {
+        display: none !important;
+    }
+    .hamburger {
+        display: block;
+    }
+
+    header.main-header ul {
+        display: flex;
+        margin-bottom: 0;
+    }
+    header.main-header ul a {
+        color: white;
+        font-weight: 300;
+        font-size: 0.94rem;
+        transition: 200ms;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    header.main-header ul a:hover {
+        color: #fdcc82;
+    }
+    header.main-header > div.container {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* =-=-=-=-= FECHADO Header =-=-=-=-=-= */
+}

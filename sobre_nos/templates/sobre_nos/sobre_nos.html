@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Paz D Paula | Sobre nos{% endblock title %}
+
+{% block extrahead %}
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/sobre_nos.css' %}">
+{% endblock extrahead %}
+
+
+{% block navbar %}
+    <li class="nav-item"><a href="{% url 'inicio_home' %}">INÍCIO</a></li>
+    <li class="nav-item nav-page-selected"><a href="{% url 'sobre_nos_home' %}">SOBRE NÓS</a></li>
+    <li class="nav-item"><a href="{% url 'contato_home' %}">CONTATO</a></li>
+{% endblock navbar %}
+
+{% block navbarMobile %}
+    <li class="nav-item"><a href="{% url 'inicio_home' %}">INÍCIO</a></li>
+    <li class="nav-item nav-page-selected"><a href="{% url 'sobre_nos_home' %}">SOBRE NÓS</a></li>
+    <li class="nav-item"><a href="{% url 'contato_home' %}">CONTATO</a></li>
+{% endblock navbarMobile %}
+
+{% block content %}
+    <section class="row main-screen" style="background-image: url({% static 'img/sobre_nos/background-parallax.jpg' %});">
+        <div class="skip-nav">
+            <div class="container">
+                <div class="text-group">
+                    <h1>NOSSA MISSÃO</h1>
+                    <p>Ensinar com amor, mostrar aos alunos a importância dos valores
+                    do estudo, com foco na aprovação em escolas técnicas, oportunizando-os
+                    a um ensino de qualidade e um futuro de sucesso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="second-screen">
+        <div class="background-history-text">
+            <div class="container">
+                <div class="history-text-group">
+                    <h1>NOSSA HISTÓRIA</h1>
+                    <p>No dia, 13 de junho de 2012, foi fundado o curso Paz D Paula, pelos professores Gabriel de Paula e Ana Paula Paz.
+                    Com sede na rua João Leivas de Carvalho, bairro São José, Canoas/Rio Grande do Sul. 
+                    Professores e fundadores apaixonados pelo ensino e por lecionar, buscaram novas técnicas de estudo e aos poucos com muita dedicação, compromisso e competência, adquiriram a confiança e o reconhecimento de pais e alunos.
+                    Determinados a preparar jovens para o ingresso em escolas de excelência em nível técnico, como o Instituto Federal e Liberato, com o passar dos anos foi destacando-se na aprovação de seus alunos em maça, obtendo ótimas colocações nas escolas federais e Liberato, colaborando para que a maioria de seus alunos garantissem uma vaga nas melhores escolas técnicas da região.
+                    Nosso trabalho é realizado com transparência e ética. Trabalhamos sempre com humildade, diálogo, amor e valorização ao próximo.
+                    O curso tem como diferencial a qualidade oferecida em turmas reduzidas, o amor transmitidos aos seus alunos através de vínculo que criamos ao tratá-los como um ser especial, único e importante. E também no ótimo índice de aprovação acima de 90%.</p> 
+                    
+                    <p>Buscamos preparar nossos alunos para enfrentarem desafios, ampliando seus conhecimentos, para tornarem-se alunos críticos, competentes e de sucesso.
+                    O curso também oferece orientação profissional, experiência, aulas diferenciadas, atividades motivacionais, técnicas de estudo, simulados, atividades complementares e apoio emocional.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="who-we-are-wrapper">
+                <h2>QUEM SOMOS?</h2>
+                <div class="who-we-are-group">
+                    <section class="f-section">
+                        <img src="{% static 'img/sobre_nos/ana-paula.png' %}" alt="">
+                        <div class="text-group">
+                            <h3>Professores</h3>
+                            <p>Temos os fundadores que atuam nas disciplinas de matemática, português e redação. E uma equipe qualificada, com experiência e formação acadêmica sempre atualizada nos concursos das escolas federais e Liberato, com o objetivo de oferecer aos nossos alunos condições de estarem bem preparados e que alcancem as melhores classificações.</p>
+                        </div>
+                        <img src="{% static 'img/sobre_nos/gabriel-paula.png' %}" alt="">
+                    </section>
+                    <section class="s-section">
+                        <div class="box-group">
+                            <div class="box-text-group">
+                                <h3>Visão</h3>
+                                <p>Ser excelência em curso preparatório para as escolas técnicas, transmitir e gerar valores para os nossos alunos, agregando os conhecimentos necessários nas áreas de sustentabilidade e empreendedorismo.</p>
+                                <div class="image-row">
+                                    <i class="far fa-eye"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-group">
+                            <div class="box-text-group">
+                                <h3>Valores</h3>
+                                <p>Ética, respeito, responsabilidade, qualidade no que faz, humildade, solidariedade, sabedoria, confiança, comprometimento como ensino, amizade, paz, autodisciplina, reconhecimento e o crescimento de forma significativa e sustentável.</p>
+                                <div class="image-row">
+                                    <i class="fas fa-balance-scale"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

@@ -46,10 +46,40 @@
                         {% block navbar %}
                         {% endblock navbar %}
                     </ul>
+                    <button class="hamburger">
+                        <div class="bar"></div>
+                    </button>
                 </div>
             </nav>
         </div>
     </header>
+
+    <nav class="mobile-nav">
+        <div class="nav-wrapper">
+            <a href="{% url 'inicio_home' %}"><img src="{% static "img/pazdpaula-logo.png" %}" alt="Logo"></a>
+            <button class="hamburger">
+                <div class="bar"></div>
+            </button>
+        </div>
+
+        <ul class="navbar-ul">
+            {% block navbarMobile %}
+            {% endblock navbarMobile %}
+        </ul>
+
+        <div class="nav-contact">
+            <div class="icon-contact">
+                <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/pazdpaula" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/pazdpaula/?hl=pt-br" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="text-contact">
+                <p>Entre em contato com a gente!</p>
+                <p><i class="fas fa-envelope"></i>pazdpaula@gmail.com</p>
+                <p><i class="fas fa-phone-alt"></i>(51) 9759-7527</p>
+            </div>
+        </div>
+    </nav>
 
     <!-- Main Content -->
     {% block content %}
@@ -75,10 +105,17 @@
 
     <script>
         $(document).ready(function() {
-            
-
             $("div.extra-information > i").click(function() {
                 $("div.extra-information").fadeOut(200)
+            });
+
+            const menuBtn = $(".hamburger");
+            const mobileMenu = $(".mobile-nav");
+
+            menuBtn.click(function() {
+                menuBtn.toggleClass("is-active");
+                mobileMenu.toggleClass("is-active");
+                $("body").toggleClass("is-active");
             });
         });
     </script>

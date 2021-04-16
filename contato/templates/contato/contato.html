@@ -11,36 +11,98 @@
 
 {% block navbar %}
     <li class="nav-item"><a href="{% url 'inicio_home' %}">INÍCIO</a></li>
-    <li class="nav-item"><a href="#">SOBRE NÓS</a></li>
+    <li class="nav-item"><a href="{% url 'sobre_nos_home' %}">SOBRE NÓS</a></li>
     <li class="nav-item nav-page-selected"><a href="{% url 'contato_home' %}">CONTATO</a></li>
-    <li class="nav-item"><a href="#">ALUNOS</a></li>
 {% endblock navbar %}
 
+{% block navbarMobile %}
+    <li class="nav-item"><a href="{% url 'inicio_home' %}">INÍCIO</a></li>
+    <li class="nav-item"><a href="{% url 'sobre_nos_home' %}">SOBRE NÓS</a></li>
+    <li class="nav-item nav-page-selected"><a href="{% url 'contato_home' %}">CONTATO</a></li>
+{% endblock navbarMobile %}
+
 {% block content %}
-    <div class="row main-screen">
-        <div class="skip-nav" style="background-image: url({% static 'img/contact-wallpaper.png' %});">
+    <div class="row main-screen" style="background-image: url({% static 'img/background-screen1.png' %});">
+        <div class="skip-nav">
             <div class="information-part">
                 <div class="text-group">
                     <div class="visit-wrap">
                         <h4>Faça uma visita</h4>
-                        <p>Nos encontramos em: Rua João Leivas de Carvalho 462, 92420-250, Canoas RS</p>
+                        <p><i class="fas fa-map-marker-alt"></i>Nos encontramos em:<br>Rua João Leivas de Carvalho 462, 92420-250, Canoas RS</p>
                     </div>
                     <div class="contact-wrap">
-                        <h3>Contato</h3>
-                        <p>Entre em contato com a gente!</p>
-                        <p>(51) 9734-0053</p>
-                        <p>(51) 9759-7527</p>
+                        <div class="contact-wrap-phone">
+                            <h3>Contato</h3>
+                            <p>Entre em contato com a gente!</p style="font-size: 19px;">
+                            <div class="contact-contact-group">
+                                <a href="#" target="_blank"><i class="fab fa-whatsapp"></i>(51) 9734-0053</a>
+                                <p><i class="fas fa-phone-alt"></i>(51) 9759-7527</p>
+                                <a href="https://www.facebook.com/pazdpaula" target="_blank"><i class="fab fa-facebook-f"></i>@pazdpaula</a>
+                                <a href="https://www.instagram.com/pazdpaula/?hl=pt-br" target="_blank"><i class="fab fa-instagram"></i>@pazdpaula</a>
+                            </div>
+                        </div>
                         
+                        <form action="." method="POST" class="email-contact-group">
+                            {% csrf_token %}
+                            <div class="input-data">
+                                <h3>Mande um e-mail diretamente para nós :)</h3>
+                            </div>
 
-                    </div>
-                    <div class="paragraph-wrap">
-                        <p>Se torne um aluno do nosso cursinho e se prepare para passar nas melhores escolas técnicas</p>
+                            <div class="input-data">
+                                <input type="text" required>
+                                <div class="underline"></div>
+                                <label for="">Nome</label>
+                            </div>
+
+                            <div class="input-data">
+                                <input type="text" required>
+                                <div class="underline"></div>
+                                <label for="">Email</label>
+                            </div>
+
+                            <div class="input-data">
+                                <textarea cols="30" rows="5" required></textarea>
+                                <span id="psna">Assunto</span>
+                            </div>
+
+                            <div class="input-data">
+                                <button type="submit" class="btn btn-success">Enviar</button>
+                            </div>
+
+                            <div class="input-data">
+                                <p>Se torne um aluno do nosso cursinho e se prepare para passar nas melhores escolas técnicas</p>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
             <div class="maps-part">
-                <img src="{% static 'img/maps.jpg' %}" alt="">
+                <div id="map"></div>
             </div>
         </div>
     </div>
 {% endblock content %}
+
+{% comment %} TEM QUE ATIVAR UMA CHAVE COM EMAIL DA PAZDPAULA {% endcomment %}
+{% block extrafooter %}
+    <script>
+        function initMap() {
+            const map = new google.maps.Map(document.getElementById("map"), {
+                center: {
+                    lat: -29.88215076812458,
+                    lng: -51.175735886508
+                },
+                zoom: 16,
+            });
+
+            const marker = new google.maps.Marker({
+                position: {
+                    lat: -29.88226076812458,
+                    lng: -51.175712886508
+                },
+                map: map,
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2qAhy7PADodQVV8mzTTXMA4sK7Vwh2aw&callback=initMap&libraries=&v=weekly" async></script>
+{% endblock extrafooter %}
