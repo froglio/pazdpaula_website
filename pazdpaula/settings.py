@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'inicio',
     'contato',
     'sobre_nos',
+    'tools',
 ]
 
 MIDDLEWARE = [
@@ -114,13 +115,14 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'UTC'
+# TIME_ZONE = 'America/Sao_Paulo'
+TIME_ZONE = 'Etc/GMT'  # http://stackoverflow.com/questions/13866926/python-pytz-list-of-timezones
 
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)

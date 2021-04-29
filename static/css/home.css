@@ -162,15 +162,32 @@
     right: 37px;
 }
 
+.background-second-screen .text-news.active {
+    display: block;
+}
+
 .background-second-screen .text-news {
+    display: none;
     background-color: var(--second-yellow);
     padding: 20px;
     box-shadow: 4px 4px 5px #083D7734;
     border-radius: 25px 0 25px 0;
 }
+.background-second-screen .text-news .title-line {
+    display: flex;
+}
 .background-second-screen .text-news h3 {
     color: var(--main-blue);
     font-weight: 600;
+    margin-right: 2%;
+    overflow: hidden;
+}
+.background-second-screen .text-news button.new-post-block {
+    background-color: var(--red);
+    color: white;
+    padding: 7px;
+    max-height: 36px;
+    border-radius: 15%;
 }
 .background-second-screen .text-news hr {
     background-color: var(--main-blue);
@@ -276,23 +293,6 @@
 .background-third-screen .picture-group {
     z-index: 1;
     position: relative;
-}
-.background-third-screen .picture-group i {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: white;
-    cursor: pointer;
-    transition: 200ms;
-}
-.background-third-screen .picture-group i.fa-chevron-right {
-    right: 2%;
-}
-.background-third-screen .picture-group i.fa-chevron-left {
-    left: 2%;
-}
-.background-third-screen .picture-group i:hover {
-    color: rgb(202, 202, 202);
 }
 .background-third-screen .backscreen {
     background-color: #CCC;
@@ -489,8 +489,6 @@ div.space-between-pages {
 
 
 /* MEDIA QUERIES */
-@media (max-width:)
-
 @media (max-width: 1325px) {
     .background-fifth-screen .background-image .text-group {
         padding: 2% 30% 11% 0%;
@@ -616,14 +614,6 @@ div.space-between-pages {
     .background-third-screen .paper-background-group p {
         font-size: 1.1rem;
         padding: 18px 0;
-    }
-
-    .background-third-screen .picture-group i.fa-chevron-right {
-        right: 0%;
-    }
-
-    .background-third-screen .picture-group i.fa-chevron-left {
-        left: 1%;
     }
 
     .background-fifth-screen .background-image .text-group {

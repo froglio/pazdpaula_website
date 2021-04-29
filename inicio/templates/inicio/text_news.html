@@ -1,0 +1,18 @@
+{% for data in object_list %}
+    <div {% if data.id == last_post_id %}class="text-news active"{% else %}class="text-news"{% endif %}>
+        <div class="title-line">
+            <h3>{{ data.titulo }}</h3>
+            
+            {% if data.id == last_post_id %}
+            <button class="new-post-block">Novo</button>
+            {% endif %}
+        </div>
+        <hr>
+        <p id="textNewsContent">{{ data.conteudo }}</p>
+        <p id="textNewsAuthorDate">{{data.last_name}} {{ data.first_name }} - {{ data.criado }}</p>
+        <div class="text-news-arrow-group">
+            <i id="previousTextIcon" class="fas fa-angle-left previousTextIcon"></i>
+            <i id="nextTextIcon" class="fas fa-angle-right nextTextIcon"></i>
+        </div>
+    </div>
+{% endfor %}

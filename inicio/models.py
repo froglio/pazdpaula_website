@@ -15,11 +15,12 @@ class Post(models.Model):
 
     conteudo = models.TextField()
 
-    publicado = models.DateTimeField(
-        default=timezone.now
+    criado = models.DateTimeField(
+        auto_now_add=True
     )
 
 
-    def __str__(self):
-        return "{} - {}".format(self.titulo, self.publicado)
+    # def __str__(self):
+    #     publicado_convertido = self.publicado.strftime("%d/%m/%Y %H:%M:%S")
+    #     return "{} - {}".format(self.titulo, publicado_convertido)
     
