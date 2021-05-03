@@ -8,7 +8,7 @@
             {% endif %}
         </div>
         <hr>
-        <p id="textNewsContent">{{ data.conteudo }}</p>
+        <p id="textNewsContent">{{ data.conteudo|safe }}</p>
         <p id="textNewsAuthorDate">{{data.last_name}} {{ data.first_name }} - {{ data.criado }}</p>
         <div class="text-news-arrow-group">
             <i id="previousTextIcon" class="fas fa-angle-left previousTextIcon"></i>

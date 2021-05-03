@@ -370,6 +370,12 @@
     cursor: pointer;
     box-shadow: 5px 5px;
 }
+.background-third-screen .student-block.grade .year-class {
+    display: none;
+}
+.background-third-screen .student-block.grade .year-class.active {
+    display: block;
+}
 /* fechado THIRD SCREEN */
 
 /* FORTH SCREEN */

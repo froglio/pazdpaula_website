@@ -2,6 +2,8 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 
+from ckeditor.fields import RichTextField
+
 
 class Post(models.Model):
     titulo = models.CharField(
@@ -13,7 +15,8 @@ class Post(models.Model):
         on_delete=models.CASCADE
     )
 
-    conteudo = models.TextField()
+    #conteudo = models.TextField()
+    conteudo = RichTextField()
 
     criado = models.DateTimeField(
         auto_now_add=True
